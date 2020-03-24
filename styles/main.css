@@ -5,7 +5,7 @@
     .info__heading, .heading {
       font-size: 36px; } }
 
-html, .info__heading, .info__title, .info__paragraph, .heading, .gallery__photos, .consultation__title, .consultation__paragraph, .person__name, .person__position, .person__text, .contacts__header, .contacts__text {
+html, .header__title, .info__heading, .info__title, .info__paragraph, .heading, .gallery__photos, .consultation__title, .consultation__paragraph, .person__name, .person__position, .person__text, .contacts__header, .contacts__text {
   margin: 0;
   padding: 0; }
 
@@ -432,7 +432,8 @@ img {
   height: 100vh;
   background-image: url(../images/header.png);
   background-position: center;
-  background-size: cover; }
+  background-size: cover;
+  overflow: hidden; }
   .header__top {
     -ms-flex-pack: distribute;
         justify-content: space-around;
@@ -477,14 +478,13 @@ img {
   .header__toggle {
     display: none; }
   .header__title {
-    position: relative;
-    -ms-flex-item-align: stretch;
-        align-self: stretch;
-    margin: 44vh 7.8125rem 0 6.25rem;
+    position: absolute;
+    bottom: 23.5%;
+    left: 9.6%;
     color: #fff;
     font-size: 3.6875rem;
     font-weight: bold;
-    line-height: 1;
+    line-height: 1.1;
     text-transform: capitalize; }
   .header__title::before {
     position: absolute;
@@ -494,11 +494,7 @@ img {
     content: "";
     background-color: #fff;
     left: 0;
-    top: -1.25rem; }
-  .header__nav {
-    -ms-flex-item-align: stretch;
-        align-self: stretch;
-    margin: 5.75rem 6.25rem 3.25rem; }
+    top: -0.9375rem; }
 
 @media (max-width: 767.98px) {
   .header__logo {
@@ -574,19 +570,22 @@ img {
               transform: rotate(-45deg) translate(1px, -1px); }
     .header__toggle:checked ~ .nav {
       -webkit-transform: none;
-              transform: none; }
-  .header__nav {
-    margin: 0; } }
+              transform: none; } }
 
 @media (max-width: 575.98px) {
   .header__title {
-    margin: 54vh 1.25rem 0;
+    bottom: 14%;
+    left: 5.9%;
     font-size: 2.8125rem;
     line-height: 0.95; }
     .header__title:before {
       top: -0.9375rem; } }
 
 .nav {
+  position: absolute;
+  bottom: 7%;
+  left: 7.7%;
+  width: 84.8%;
   text-transform: uppercase;
   font-weight: 500; }
   .nav__list {
@@ -619,7 +618,6 @@ img {
 
 @media (max-width: 767.98px) {
   .nav {
-    position: absolute;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -632,6 +630,7 @@ img {
             align-items: flex-start;
     top: 0;
     right: 0;
+    left: 0;
     width: 100%;
     height: 100vh;
     background-color: #0075ff;
